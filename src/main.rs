@@ -1,9 +1,15 @@
 mod change_temperature;
 mod fibonacci;
+mod ownership;
+mod slices;
+mod struct_learning;
 
 use std::io;
 use rand::Rng;
 use std::cmp::Ordering;
+use crate::ownership::scope;
+use crate::slices::slice_learning;
+use crate::struct_learning::print_user_info;
 
 fn main() {
     // 猜数字游戏
@@ -11,7 +17,13 @@ fn main() {
     // 摄氏度转换为华氏度
     // change_temperature::change_temperature();
     // 斐波那契数列
-    fibonacci::fibonacci();
+    // fibonacci::fibonacci();
+    // ownership 的作用域问题
+    //scope();
+    // slices 学习
+    //slice_learning();
+    // 结构体学习
+    print_user_info();
 }
 
 
