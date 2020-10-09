@@ -1,9 +1,8 @@
 pub fn slice_learning() {
     let words = String::from("hello my name is LiWenYang");
-    let index =  first_word(&words);
+    let index = first_word(&words);
     println!("第一个单词的索引是----> {}", index);
 }
-
 
 fn first_word(s: &String) -> usize {
     let bytes = s.as_bytes();

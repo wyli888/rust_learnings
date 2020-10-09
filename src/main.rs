@@ -1,15 +1,21 @@
 mod change_temperature;
+mod enum_learning;
 mod fibonacci;
 mod ownership;
 mod slices;
+mod string_learnings;
 mod struct_learning;
+mod print_learning;
 
-use std::io;
-use rand::Rng;
-use std::cmp::Ordering;
+use crate::enum_learning::enum_learning_test;
 use crate::ownership::scope;
 use crate::slices::slice_learning;
+use crate::string_learnings::string_test;
 use crate::struct_learning::print_user_info;
+use rand::Rng;
+use std::cmp::Ordering;
+use std::io;
+use crate::print_learning::print_test;
 
 fn main() {
     // 猜数字游戏
@@ -23,9 +29,12 @@ fn main() {
     // slices 学习
     //slice_learning();
     // 结构体学习
-    print_user_info();
+    //print_user_info();
+    // 枚举类型学习
+    // enum_learning_test();
+    // string_test();
+    print_test();
 }
-
 
 // 参数字游戏
 fn guessing_game() {
@@ -38,7 +47,9 @@ fn guessing_game() {
         println!("Please guessing a number");
 
         let mut guessing_number = String::new();
-        io::stdin().read_line(&mut guessing_number).expect("Failed to readline");
+        io::stdin()
+            .read_line(&mut guessing_number)
+            .expect("Failed to readline");
 
         let guessing_number: i32 = match guessing_number.trim().parse() {
             Ok(num) => num,

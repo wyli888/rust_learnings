@@ -40,7 +40,10 @@ pub fn fibonacci() {
     // 第一种方法 调用斐波那契数列函数
     // println!("斐波那契数列第{}项的值为：{}", i32_user_input, get_fibonacci(i32_user_input));
     // 第二种方法 直接去上面的数组的最后一个元素
-    println!("斐波那契数列第{}项的值为：{}", i32_user_input, v[i32_user_input as usize]);
+    println!(
+        "斐波那契数列第{}项的值为：{}",
+        i32_user_input, v[i32_user_input as usize]
+    );
 }
 
 // 递归求斐波那契数列第n项的值
