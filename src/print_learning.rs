@@ -18,5 +18,6 @@ pub fn print_test() {
         1...4 => println!("All"),
         n @ 22 => println!("the number is {}", n),
         _ => println!("Common"),
+
     }
 }
