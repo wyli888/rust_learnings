@@ -6,6 +6,8 @@ mod slices;
 mod string_learnings;
 mod struct_learning;
 mod print_learning;
+mod types;
+mod tuples;
 
 use crate::enum_learning::enum_learning_test;
 use crate::ownership::scope;
@@ -16,6 +18,8 @@ use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
 use crate::print_learning::print_test;
+use crate::types::integer_learning_run;
+use crate::tuples::tuples_learning;
 
 fn main() {
     // 猜数字游戏
@@ -25,15 +29,22 @@ fn main() {
     // 斐波那契数列
     // fibonacci::fibonacci();
     // ownership 的作用域问题
-    //scope();
+    // scope();
     // slices 学习
-    //slice_learning();
+    // slice_learning();
     // 结构体学习
-    //print_user_info();
+    // print_user_info();
     // 枚举类型学习
     // enum_learning_test();
-    // string_test();
-    print_test();
+    // 字符串学习
+    //string_test();
+    // 打印函数的学习
+    // print_test();
+    // 数据类型学习
+    // integer_learning_run()
+    // 元组学习
+    tuples_learning()
+
 }
 
 // 参数字游戏

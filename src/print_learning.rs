@@ -20,4 +20,12 @@ pub fn print_test() {
         _ => println!("Common"),
 
     }
+    let mut v = vec![1,3,5,6];
+    while let Some(T) = v.pop() {
+        println!("v is {}", T);
+    }
+
+    let x = true;
+    let x = 5;
+    println!("x is {}", x);
 }
