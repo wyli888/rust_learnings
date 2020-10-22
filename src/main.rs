@@ -8,6 +8,8 @@ mod struct_learning;
 mod print_learning;
 mod types;
 mod tuples;
+mod match_learning;
+mod closure_learn;
 //mod philosopher_meal;
 
 use crate::enum_learning::enum_learning_test;
@@ -23,12 +25,16 @@ use crate::types::integer_learning_run;
 use crate::tuples::tuples_learning;
 use std::thread;
 use std::sync::{Mutex,Arc};
+use crate::closure_learn::closure_learning;
+
+extern crate ansi_term;
+use ansi_term::Color;
 
 fn main() {
     // 猜数字游戏
     // guessing_game();
     // 哲学家进餐问题
-    philosopher_meal()
+    // philosopher_meal()
     // 摄氏度转换为华氏度
     // change_temperature::change_temperature();
     // 斐波那契数列
@@ -49,6 +55,14 @@ fn main() {
     // integer_learning_run()
     // 元组学习
     // tuples_learning()
+    // 函数闭包
+    closure_learning();
+
+    // 在终端打印出不同的颜色
+    println!("This is {} in color, {} in color and {} in color",
+             Color::Red.paint("red"),
+             Color::Blue.paint("blue"),
+             Color::Green.paint("green"));
 }
 
 // 参数字游戏
