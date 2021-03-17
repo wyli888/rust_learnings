@@ -10,6 +10,7 @@ mod types;
 mod tuples;
 mod match_learning;
 mod closure_learn;
+mod trait_learning;
 //mod philosopher_meal;
 
 use crate::enum_learning::enum_learning_test;
@@ -26,9 +27,14 @@ use crate::tuples::tuples_learning;
 use std::thread;
 use std::sync::{Mutex,Arc};
 use crate::closure_learn::closure_learning;
-
+use crate::trait_learning::trait_learning;
 extern crate ansi_term;
 use ansi_term::Color;
+
+
+fn print_type_of<T>(_: &T) {
+    println!("{}", std::any::type_name::<T>())
+}
 
 fn main() {
     // 猜数字游戏
@@ -56,13 +62,30 @@ fn main() {
     // 元组学习
     // tuples_learning()
     // 函数闭包
-    closure_learning();
-
+    //closure_learning();
+    // trait 学习
+    // trait_learning();
     // 在终端打印出不同的颜色
-    println!("This is {} in color, {} in color and {} in color",
-             Color::Red.paint("red"),
-             Color::Blue.paint("blue"),
-             Color::Green.paint("green"));
+    // println!("This is {} in color, {} in color and {} in color",
+    //          Color::Red.paint("red"),
+    //          Color::Blue.paint("blue"),
+    //          Color::Green.paint("green"));
+
+
+    let place1 = "hello world";
+    let other = place1;
+
+    let aaa = 5;
+    let bbb = aaa;
+    let four = "4".parse::<u32>();
+    println!("place1 的地址是==>  {:p}", &place1);
+
+    println!("other 的地址是==>  {:p}", &other);
+
+    println!("aaa 的地址是==>  {:p}", &aaa);
+
+    println!("bbb 的地址是==>  {:p}", &bbb);
+
 }
 
 // 参数字游戏
